@@ -1,7 +1,7 @@
 import {IInformationConfig} from "./src/typings/types";
 
 export const informationConfig:IInformationConfig = {
-    serverApi:'http://127.0.0.1:2333', //mx-space的后台地址
+    serverApi:'https://server.suemor.com/api/v2', //mx-space的后台地址
     username:'', //可不填，默认使用mx-space的名称
     introduce : '',//可不填，默认使用mx-space的介绍
     social : {
