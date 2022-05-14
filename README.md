@@ -10,11 +10,6 @@
 - Sass
 
 # 使用
-
-```sh
-pnpm i
-pnpm dev
-```
 修改`config.ts`即可
 
 # 注意 ⚠️
