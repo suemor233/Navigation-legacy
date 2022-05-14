@@ -14,7 +14,6 @@ export const useArticle = defineStore('article', () => {
     ;(async ()=>{
         const res = await GetArticle()
         article.title = res.title
-        console.log(res)
         article.content = marked((res.text).substring(0,200) + '....')
         article.url = `https://www.suemor.com/posts/${res.category.slug}/${res.slug}`
     })()

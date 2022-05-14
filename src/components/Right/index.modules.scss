@@ -1,5 +1,4 @@
 .card-right {
-
   flex: 7;
   box-sizing: content-box;
   padding: 1.5em;
@@ -21,6 +20,7 @@
       @media (max-width: 900px) {
         line-height: 2.5em;
       }
+
       letter-spacing: .3px;
       color: #34495e;
       line-height: 3em;
