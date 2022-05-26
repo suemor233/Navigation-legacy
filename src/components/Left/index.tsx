@@ -1,13 +1,9 @@
-const Left:React.FC = () => {
- return (
-   <>    
-     <div className="absolute">
-        left
-     </div> 
-   </> 
- ); 
-}; 
+const Left: React.FC = () => {
+  return (
+    <>
+      <div className="absolute">left</div>
+    </>
+  )
+}
 
-export default Left;
-
-
+export default Left

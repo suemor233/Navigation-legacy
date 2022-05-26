@@ -5,7 +5,7 @@ import CardContent from './layouts/CardContent'
 const App: React.FC = (): JSX.Element => {
   return (
     <>
-      <div className='h-screen bg-gray-50 flex justify-center items-center'>
+      <div className="h-screen bg-gray-50 flex justify-center items-center">
         <CardContent>
           <Left />
           <Right />
