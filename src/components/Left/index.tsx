@@ -3,7 +3,11 @@ import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import
 import { Avatar } from '@nextui-org/react'
 import styles from './index.module.scss'
 import Icon from '../Icon'
+import { useStores } from '../../store'
 const Left: React.FC = () => {
+  const {userStore}= useStores()
+  const {counter} = userStore
+  console.log(counter)
   return (
     <>
       <div className="absolute w-72 flex justify-center items-center h-full">

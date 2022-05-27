@@ -17,6 +17,8 @@ specifiers:
   eslint-config-prettier: ^8.5.0
   eslint-plugin-prettier: ^4.0.0
   eslint-plugin-react: ^7.30.0
+  mobx: 6.1.8
+  mobx-react-lite: 3.2.0
   postcss: ^8.4.14
   prettier: ^2.6.2
   react: ^18.0.0
@@ -33,6 +35,8 @@ dependencies:
   '@fortawesome/react-fontawesome': 0.1.18_hjfkmtq3pe7bdfmd7inrupgslm
   '@nextui-org/react': 1.0.0-beta.7_ef5jwxihqo6n7gxfmzogljlgcm
   babel-plugin-macros: 3.1.0
+  mobx: 6.1.8
+  mobx-react-lite: 3.2.0_kg453ti44naongumccz5tx67ou
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
 
@@ -2332,6 +2336,28 @@ packages:
   /minimist/1.2.6:
     resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
     dev: true
+
+  /mobx-react-lite/3.2.0_kg453ti44naongumccz5tx67ou:
+    resolution: {integrity: sha512-q5+UHIqYCOpBoFm/PElDuOhbcatvTllgRp3M1s+Hp5j0Z6XNgDbgqxawJ0ZAUEyKM8X1zs70PCuhAIzX1f4Q/g==}
+    peerDependencies:
+      mobx: ^6.1.0
+      react: ^16.8.0 || ^17
+      react-dom: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      mobx: 6.1.8
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
+    dev: false
+
+  /mobx/6.1.8:
+    resolution: {integrity: sha512-U4yCvUeh6yKXRwFxm2lyJjXPVekOEar/R8ZKWAXem/3fthJqYflViawfjDAUh7lZEvbKqljC3NT/pSaUKpE+gg==}
+    dev: false
 
   /modern-normalize/1.1.0:
     resolution: {integrity: sha512-2lMlY1Yc1+CUy0gw4H95uNN7vjbpoED7NNRSBHE25nWfLBdmMzFCsPshlzbxHz+gYMcBEUN8V4pU16prcdPSgA==}
