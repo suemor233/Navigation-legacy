@@ -1,8 +1,12 @@
+import styles from './index.module.scss'
 const CardContent: React.FC<React.PropsWithChildren<{}>> = ({ children }: React.PropsWithChildren<{}>): JSX.Element => {
   return (
     <>
       <div
-        className="flex relative flex-col md:flex-row bg-white shadow-2xl rounded-2xl transition-transform duration-400 transform  hover:scale-101"
+        className={
+          styles['card'] +
+          ' flex relative flex-col md:flex-row bg-white card rounded-2xl transition-transform duration-400 transform '
+        }
         style={{ height: '40em', width: '70em' }}
       >
         {children}
