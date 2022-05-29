@@ -1,13 +1,13 @@
 import { InformationConfigType } from './src/models/InformationConfigType'
 export const informationConfig: InformationConfigType = {
-  name: 'React',
-  introcuce: 'React is a JavaScript library for building user interfaces.',
+  name: 'suemor',
+  introcuce: '我是废物',
   socail: {
     middle: [ 
       {
         name: 'twitter',
         url: 'https://twitter.com/Suemor233',
-        icon: 'icon-twitter'
+        icon: 'icon-twitter' 
       },
       {
         name: 'qq',

@@ -1,10 +1,5 @@
-import * as React from 'react'
-import {configure} from 'mobx'
-import {userStore} from './user'
+import {store, useRootStore } from '@/context/root-store';
 
-configure({enforceActions: 'always'})
-
-export const stores = {userStore}
-export const UserContext = React.createContext(stores)
-
-export const useStores = () => React.useContext(UserContext)
+export const useStore = useRootStore;
+export * from './root-store'
+export { store }

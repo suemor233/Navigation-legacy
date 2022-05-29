@@ -1,15 +1,10 @@
+import { InformationConfigType } from '@/models/InformationConfigType';
 import {makeAutoObservable} from 'mobx';
-
-class User {
+import { informationConfig } from "../../config";
+export default class UserStore {
   constructor() {
     makeAutoObservable(this)
   }
-  counter=0;
-  
-  increment = () => {
-    this.counter++
-  }
+  user:InformationConfigType = informationConfig
 }
 
-const userStore = new User();
-export {userStore}
