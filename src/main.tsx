@@ -8,10 +8,12 @@ import './styles/index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
+    <BrowserRouter>
       <NextUIProvider>
         <RootStoreProvider>
           <App />
         </RootStoreProvider>
       </NextUIProvider>
+    </BrowserRouter>
   </React.StrictMode>
 )
