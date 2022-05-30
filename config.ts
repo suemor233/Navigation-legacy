@@ -31,5 +31,76 @@ export const informationConfig: InformationConfigType = {
         github: 'https://github.com/suemor233'
       }
     ]
-  }
+  },
+  stack: [
+    {
+      name: 'HTML5',
+      progressValue: 80
+    },
+    {
+      name: 'CSS3',
+      progressValue: 50
+    },
+    {
+      name: 'JavaScript',
+      progressValue: 70
+    },
+    {
+      name: 'TypeScript',
+      progressValue: 30
+    },
+    {
+      name: 'SQL',
+      progressValue: 30
+    },
+  
+    {
+      name: 'Java',
+      progressValue: 50
+    },
+    {
+      name: 'SpringBoot',
+      progressValue: 10
+    },
+
+    {
+      name: 'Android',
+      progressValue: 50
+    },
+    {
+      name: 'Vue3',
+      progressValue: 70
+    },
+    {
+      name: 'React',
+      progressValue: 40
+    },
+    {
+      name: 'NextJS',
+      progressValue: 30
+    },
+    {
+      name: 'NuxtJS',
+      progressValue: 30
+    },
+    {
+      name: 'Express',
+      progressValue: 50
+    },
+
+    {
+      name: 'NestJs',
+      progressValue: 40
+    },
+    {
+      name: 'TailWindCSS',
+      progressValue: 70
+    },
+    {
+      name: 'SCSS',
+      progressValue: 50,
+    },
+
+  ]
+
 }

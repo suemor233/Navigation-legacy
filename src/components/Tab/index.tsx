@@ -1,44 +1,55 @@
+import { useEffect } from 'react'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import styles from './index.module.scss'
 
-type tabsType = Array<[string, boolean, string]>
+type tabsType = Array<any>
 
 const Tab: React.FC = () => {
-
   const [tabs, setTabs] = useState<tabsType>([
-    ['关于', true,'/about'],
-    ['项目', false,'/project'],
-    ['技术栈', false,'/stack']
+    ['关于', '/about', false],
+    ['项目', '/project', false],
+    ['技术栈', '/stack', false]
   ])
+  const location = useLocation()
+  useEffect(() => {
+    setTabs(
+      tabs.map(item => {
+        if (item[1] === location.pathname) {
+          return [item[0], item[1], true]
+        }
+        return [item[0], item[1], false]
+      })
+    )
+  }, [])
   const navigate = useNavigate()
   const handleSelecated = (tab: any) => {
-    navigate(tab[2])
+    navigate(tab[1])
     setTabs(
       tabs.map(item => {
         if (item[0] === tab[0]) {
-          return [item[0], true,item[2]]
+          return [item[0], item[1], true]
         }
-        return [item[0], false,item[2]]
+        return [item[0], item[1], false]
       })
     )
   }
   return (
     <>
-      <div className='flex justify-around w-full text-xl px-12 '>
+      <div className="flex justify-around w-full text-xl px-12 ">
         {tabs.map(key => {
           return (
             <button
               onClick={() => handleSelecated(key)}
               key={key[0]}
-              className={styles.btn + ' ' + (key[1] ? styles.selected : '')}
+              className={styles.btn + ' ' + (key[2] ? styles.selected : '')}
             >
               {key[0]}
             </button>
           )
         })}
       </div>
-      <div className={styles.fg}/>
+      <div className={styles.fg} />
     </>
   )
 }

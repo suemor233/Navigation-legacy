@@ -4,6 +4,8 @@ export interface InformationConfigType {
   name: string
   introcuce: string
   socail: SocialType
+  stack: StackType[]
+
 }
 
 interface SocialType {
@@ -17,6 +19,11 @@ interface MiddleSocialType {
   name: string
   url: string
   icon: string
+}
+
+export interface StackType {
+  name: string
+  progressValue: number
 }
 
 
