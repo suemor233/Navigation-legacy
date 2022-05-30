@@ -5,9 +5,8 @@ const CardContent: React.FC<React.PropsWithChildren<{}>> = ({ children }: React.
       <div
         className={
           styles['card'] +
-          ' flex relative flex-col md:flex-row bg-white card rounded-2xl transition-transform duration-400 transform '
+          ' flex md:flex-col flex-row bg-white rounded-2xl transition-all duration-400 transform'
         }
-        style={{ height: '40em', width: '70em' }}
       >
         {children}
       </div>

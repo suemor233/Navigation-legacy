@@ -1,5 +1,10 @@
 .card {
   box-shadow: 0 0 11px 3px rgb(0 0 0 / 15%);
+  height: 40em;
+  width: 70em;
+  @media  (max-width: 767px) {
+    height: auto;
+  }
   &:hover {
     transform: scale(1.01);
   }

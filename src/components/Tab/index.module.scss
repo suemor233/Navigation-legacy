@@ -1,0 +1,19 @@
+.btn {
+  color: #696969;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  padding: 0.1em .6em;
+
+  &:hover {
+    color: #000;
+  }
+}
+
+.selected {
+  background: rgba(0, 118, 255, 0.1);
+  color: #0070f3;
+  border-radius: 5px;
+  &:hover {
+    color: #0070f3;
+  }
+}
