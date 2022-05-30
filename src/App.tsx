@@ -1,7 +1,12 @@
 import React from 'react'
-import Left from './components/Left'
-import Right from './components/Right'
+import Left from '@/layouts/Left'
+import Right from './layouts/Right'
 import CardContent from './layouts/CardContent'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import About from './pages/About'
+import Project from './pages/Project'
+import Stack from './pages/stack'
+
 const App: React.FC = (): JSX.Element => {
   return (
     <>

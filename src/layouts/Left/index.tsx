@@ -1,6 +1,6 @@
 import { Avatar } from '@nextui-org/react'
 import styles from './index.module.scss'
-import Icon from '../Icon'
+import Icon from '@/components/Icon'
 import { useStore } from '@/store'
 const Left: React.FC = () => {
   const { userStore } = useStore()
