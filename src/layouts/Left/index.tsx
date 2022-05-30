@@ -2,12 +2,13 @@ import { Avatar } from '@nextui-org/react'
 import styles from './index.module.scss'
 import Icon from '@/components/Icon'
 import { useStore } from '@/store'
+import { Fragment } from 'react'
 const Left: React.FC = () => {
   const { userStore } = useStore()
 
   return (
     <>
-      <div className='relative w-72 h-full flex md:w-full'>
+      <div className="relative h-full flex md:w-full">
         <div className={styles['card'] + ' p-12 flex justify-center items-center h-full md:w-full'}>
           <div className="mb-4">
             <Avatar
@@ -28,20 +29,26 @@ const Left: React.FC = () => {
                 )
               })}
             </div>
-            
-            <div className={styles['card-button'] + ' pr-5 pl-1 '}>
-              <a target={'_blank'} href="https://suemor.com">
-                <i className="fa-brands fa-blogger-b"></i>
-                <span className="ml-0.5">Blog</span>
-              </a>
-              <a target={'_blank'} href="https://github.com/suemor233">
-                <i className="fa-brands fa-github"></i>
-                <span className="ml-0.5">Github</span>
-              </a>
+
+            <div className={styles['card-button']}>
+              {userStore.user.socail.bottom.map((item,index) => {
+                return (
+                  <Fragment key={index}>
+                    <a target={'_blank'} href={item.blog}>
+                      <i className="fa-brands fa-blogger-b"></i>
+                      <span className="ml-0.5">Blog</span>
+                    </a>
+                    <a target={'_blank'} href={item.github}>
+                      <i className="fa-brands fa-github"></i>
+                      <span className="ml-0.5">Github</span>
+                    </a>
+                  </Fragment>
+                )
+              })}
             </div>
           </div>
         </div>
-        <div className={styles['fg'] + ' md:hidden'}/>
+        <div className={styles['fg'] + ' md:hidden'} />
       </div>
     </>
   )

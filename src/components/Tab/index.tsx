@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import styles from './index.module.scss'
 
 type tabsType = Array<[string, boolean, string]>
@@ -25,7 +25,7 @@ const Tab: React.FC = () => {
   }
   return (
     <>
-      <div className='flex justify-around w-full text-xl px-12'>
+      <div className='flex justify-around w-full text-xl px-12 '>
         {tabs.map(key => {
           return (
             <button
@@ -38,6 +38,7 @@ const Tab: React.FC = () => {
           )
         })}
       </div>
+      <div className={styles.fg}/>
     </>
   )
 }

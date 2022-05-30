@@ -1,7 +1,10 @@
 const About:React.FC = () => {
  return (
    <>    
-     <div>about</div> 
+   <div>
+   <div>about</div> 
+   </div>
+
    </> 
  ); 
 }; 

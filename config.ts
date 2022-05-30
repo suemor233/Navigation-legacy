@@ -3,11 +3,11 @@ export const informationConfig: InformationConfigType = {
   name: 'suemor',
   introcuce: '我是废物',
   socail: {
-    middle: [ 
+    middle: [
       {
         name: 'twitter',
         url: 'https://twitter.com/Suemor233',
-        icon: 'icon-twitter' 
+        icon: 'icon-twitter'
       },
       {
         name: 'qq',
@@ -25,9 +25,11 @@ export const informationConfig: InformationConfigType = {
         icon: 'icon-bilibili'
       },
     ],
-    bottom: { //左侧底部的社交信息
-      blog: 'https://suemor.com',
-      github: 'https://github.com/suemor233'
-    }
+    bottom: [//左侧底部的社交信息
+      {
+        blog: 'https://suemor.com',
+        github: 'https://github.com/suemor233'
+      }
+    ]
   }
 }

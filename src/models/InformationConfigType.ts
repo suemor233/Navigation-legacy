@@ -1,24 +1,22 @@
+import { type } from "os"
+
 export interface InformationConfigType {
-    name:string
-    introcuce:string
-    socail:SocialType
+  name: string
+  introcuce: string
+  socail: SocialType
 }
 
 interface SocialType {
-    middle:MiddleSocialType[]
-    bottom:BottomSocialType
-  
+  middle: MiddleSocialType[]
+  bottom: Record<'blog' | 'github', string>[]
+
 }
 
 
 interface MiddleSocialType {
   name: string
-  url:string
-  icon:string
+  url: string
+  icon: string
 }
 
-interface BottomSocialType {
-  blog:string
-  github:string
-}
 

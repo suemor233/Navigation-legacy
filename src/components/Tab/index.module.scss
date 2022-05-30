@@ -2,8 +2,11 @@
   color: #696969;
   cursor: pointer;
   transition: all 0.1s ease;
-  padding: 0.1em .6em;
+  padding: 0.4em 2em;
 
+  @media  (max-width: 767px) {
+    padding: 0.4em 1em;
+  }
   &:hover {
     color: #000;
   }
@@ -16,4 +19,10 @@
   &:hover {
     color: #0070f3;
   }
+}
+
+.fg {
+  height: 1px;
+  background-color: #e5e5e5;
+  margin: 1em 0;
 }
