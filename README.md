@@ -4,7 +4,7 @@
 
 - React
 - Vite
-- TailWindCSs
+- TailWindCSS
 
 # 使用
 
