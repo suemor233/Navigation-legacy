@@ -32,7 +32,7 @@ export const informationConfig: InformationConfigType = {
       }
     ]
   },
-  stack: [
+  stack: [ // 技术栈，最好别超过16个，否则会出现进度条
     {
       name: 'HTML5',
       progressValue: 80
@@ -87,7 +87,6 @@ export const informationConfig: InformationConfigType = {
       name: 'Express',
       progressValue: 50
     },
-
     {
       name: 'NestJs',
       progressValue: 40
@@ -100,6 +99,7 @@ export const informationConfig: InformationConfigType = {
       name: 'SCSS',
       progressValue: 50,
     },
+    
 
   ]
 

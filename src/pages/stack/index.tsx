@@ -11,12 +11,10 @@ const Stack: React.FC = () => {
     return color[Math.floor(Math.random() * color.length)]
   }
   const { userStore } = useStore()
-  console.log()
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col overflow-y-auto">
       <div>
         {userStore.ArrProgress.map((item, index) => {
-          console.log(item, index)
           return (
             <div className="flex flex-row" key={index}>
               <div className="flex-1 mr-5">

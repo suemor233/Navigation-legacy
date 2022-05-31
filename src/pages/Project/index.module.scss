@@ -1,0 +1,50 @@
+.wrapper {
+
+  .link {
+    transition: all 0.3s ease;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    transition: opacity 0.3s;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 0.5em;
+    background: rgba(0, 0, 0, 0.4);
+    &:hover {
+      opacity: 1;
+    }
+ 
+    
+
+    .details {
+      color: #fff;
+      margin: 0 0.5em;
+      font-size: 1.5em;
+      transform: scale(1);
+      transition: transform .3s;
+      &:hover {
+        transform: scale(1.1);
+      }
+      &::after {
+        content: "\f06e";
+        margin-left: 0.5em;
+        font-family: fontawesome;
+        
+      }
+    }
+  }
+
+  .imgCard {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    &:hover {
+      box-shadow: 0 0 10px rgb(0 0 0 / 10%), 0 5px 20px rgb(0 0 0 / 20%);
+    }
+  }
+}
