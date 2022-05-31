@@ -2,7 +2,6 @@ import React from 'react'
 import Left from '@/layouts/Left'
 import Right from './layouts/Right'
 import CardContent from './layouts/CardContent'
-
 const App: React.FC = (): JSX.Element => {
   return (
     <>

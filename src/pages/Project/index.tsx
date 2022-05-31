@@ -4,7 +4,7 @@ const Project: React.FC = () => {
   const { userStore } = useStore()
   return (
     <>
-      <div className={ styles.project + " transition-all items-center h-full overflow-y-auto"}>
+      <div className={ styles.project + " transition-all items-center h-full overflow-y-auto animate__animated animate__fadeIn"}>
         {userStore.user.project &&
           userStore.user.project.map(item => {
             return (
