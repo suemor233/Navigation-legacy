@@ -1,5 +1,6 @@
 import { useStore } from '@/store'
 import styles from './index.module.scss'
+import { Image } from "@nextui-org/react";
 const Project: React.FC = () => {
   const { userStore } = useStore()
   return (
@@ -8,9 +9,9 @@ const Project: React.FC = () => {
         {userStore.user.project &&
           userStore.user.project.map(item => {
             return (
-              <div className={styles.wrapper + ' flex flex-col '}>
+              <div className={styles.wrapper + ' flex flex-col '} key={item.name}>
                 <div className="relative w-full h-full">
-                  <img
+                  <Image
                     className={styles.imgCard}
                     src={item.img}
                     alt={item.name}
