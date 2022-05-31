@@ -1,9 +1,9 @@
-import { type } from "os"
 
 export interface InformationConfigType {
   name: string
   introcuce: string
   socail: SocialType
+  about: AboutType
   project: ProjectType[]
   stack: StackType[]
 
@@ -13,6 +13,19 @@ interface SocialType {
   middle: MiddleSocialType[]
   bottom: Record<'blog' | 'github', string>[]
 
+}
+
+interface AboutType {
+  simple: AboutSimpleType[]
+  details: {
+    title: string
+    content: string
+  }[]
+}
+
+export interface AboutSimpleType {
+  Aboutkey: string
+  Aboutvalue: string
 }
 
 
