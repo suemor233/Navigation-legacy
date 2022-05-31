@@ -32,6 +32,28 @@ export const informationConfig: InformationConfigType = {
       }
     ]
   },
+  project: [ // url 可选
+    {
+      name: '搜索起始页',
+      url: 'https://search.suemor.com/',
+      img: 'https://y.suemor.com/imagessearchPage.jpg',
+    },
+    {
+      name: '博客后台',
+      url: 'https://github.com/suemor233/MyBlog-Admin',
+      img: 'https://y.suemor.com/imagesMyBlog-Admin.jpeg'
+    },
+    {
+      name: '博客后端',
+      url: 'https://github.com/suemor233/MyBlog-server',
+      img: 'https://y.suemor.com/imagesMyblog-Server.jpg'
+    },
+    {
+      name: '个人引导页',
+      url: 'https://n.suemor.com/',
+      img: 'https://y.suemor.com/imagesNavigation.jpg',
+    }
+  ],
   stack: [ // 技术栈，最好别超过16个，否则会出现进度条
     {
       name: 'HTML5',
@@ -53,7 +75,7 @@ export const informationConfig: InformationConfigType = {
       name: 'SQL',
       progressValue: 30
     },
-  
+
     {
       name: 'Java',
       progressValue: 50
@@ -99,7 +121,7 @@ export const informationConfig: InformationConfigType = {
       name: 'SCSS',
       progressValue: 50,
     },
-    
+
 
   ]
 

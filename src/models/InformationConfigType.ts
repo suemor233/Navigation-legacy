@@ -4,6 +4,7 @@ export interface InformationConfigType {
   name: string
   introcuce: string
   socail: SocialType
+  project: ProjectType[]
   stack: StackType[]
 
 }
@@ -19,6 +20,12 @@ interface MiddleSocialType {
   name: string
   url: string
   icon: string
+}
+
+interface ProjectType {
+  name: string
+  url?: string
+  img: string
 }
 
 export interface StackType {
