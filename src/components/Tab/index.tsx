@@ -14,8 +14,10 @@ const Tab: React.FC = () => {
   const location = useLocation()
   useEffect(() => {
     setTabs(
-      tabs.map(item => {
-        if (item[1] === location.pathname) {
+      tabs.map((item, index) => {
+        if (!index && location.pathname === '/') {
+          return [item[0], item[1], true]
+        } else if (item[1] === location.pathname) {
           return [item[0], item[1], true]
         }
         return [item[0], item[1], false]
