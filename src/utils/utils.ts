@@ -1,1 +1,1 @@
-export const isDev = procesi --save-dev @types/node
+export const isDev = process.env.NODE_ENV === 'development'
