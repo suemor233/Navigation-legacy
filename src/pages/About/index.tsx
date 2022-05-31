@@ -7,7 +7,7 @@ const About: React.FC = () => {
   const { userStore } = useStore()
   return (
     <>
-      <div className="px-10 pt-8 overflow-y-auto animate__animated animate__fadeIn">
+      <div className="px-10 pt-10 overflow-y-auto animate__animated animate__fadeIn">
         <div className="flex flex-col justify-around  md:text-sm">
           {userStore.ArrAboutSimple.map((item, index) => {
             return (
@@ -24,7 +24,7 @@ const About: React.FC = () => {
             )
           })}
         </div>
-        <Collapse.Group css={{ paddingLeft: '0px', marginTop: '3em' }}>
+        <Collapse.Group css={{ paddingLeft: '0px', marginTop: '2em' }}>
           {userStore.user.about.details.map((item, index) => {
             return (
               <Fragment key={index}>
