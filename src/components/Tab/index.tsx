@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import styles from './index.module.scss'
 
-type tabsType = Array<any>
+type tabsType = Array<[string, string, boolean]>
 
 const Tab: React.FC = () => {
   const [tabs, setTabs] = useState<tabsType>([
@@ -25,16 +25,18 @@ const Tab: React.FC = () => {
     )
   }, [])
   const navigate = useNavigate()
-  const handleSelecated = (tab: any) => {
-    navigate(tab[1])
-    setTabs(
-      tabs.map(item => {
-        if (item[0] === tab[0]) {
-          return [item[0], item[1], true]
-        }
-        return [item[0], item[1], false]
-      })
-    )
+  const handleSelecated = (e: React.MouseEvent, tab: [string, string, boolean]) => {
+    if (location.pathname !== tab[1]) {
+      navigate(tab[1])
+      setTabs(
+        tabs.map(item => {
+          if (item[0] === tab[0]) {
+            return [item[0], item[1], true]
+          }
+          return [item[0], item[1], false]
+        })
+      )
+    }
   }
   return (
     <>
@@ -42,7 +44,7 @@ const Tab: React.FC = () => {
         {tabs.map(key => {
           return (
             <button
-              onClick={() => handleSelecated(key)}
+              onClick={e => handleSelecated(e, key)}
               key={key[0]}
               className={styles.btn + ' ' + (key[2] ? styles.selected : '')}
             >

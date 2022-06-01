@@ -7,7 +7,7 @@ const About: React.FC = () => {
   const { userStore } = useStore()
   return (
     <>
-      <div className="px-10 pt-10 overflow-y-auto animate__animated animate__fadeIn">
+      <div className="px-10 pt-10 overflow-y-auto animate__animated animate__fadeIn h-full">
         <div className="flex flex-col justify-around  md:text-sm">
           {userStore.ArrAboutSimple.map((item, index) => {
             return (
