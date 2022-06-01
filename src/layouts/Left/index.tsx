@@ -12,7 +12,7 @@ const Left: React.FC = () => {
         <div className={styles['card'] + ' p-14 flex justify-center items-center h-full md:w-full'}>
           <div className="mb-4">
             <Avatar
-              src="https://cdn.jsdelivr.net/gh/suemor233/static@main/img/89030875.jpeg"
+              src={userStore.user.avatar}
               bordered
               css={{ size: '10em', margin: 'auto' }}
             />

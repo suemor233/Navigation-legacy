@@ -1,7 +1,5 @@
 import Tab from '../../components/Tab'
-import './index.css'
 import { Router } from '@/router'
-import { useEffect } from 'react'
 const Right: React.FC = () => {
 
   return (

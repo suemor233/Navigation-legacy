@@ -2,6 +2,7 @@ import { InformationConfigType } from './src/models/InformationConfigType'
 export const informationConfig: InformationConfigType = {
   name: 'suemor',
   introcuce: '我是废物',
+  avatar:'https://suemor.oss-cn-beijing.aliyuncs.com/img/avatar.jpeg',
   socail: {
     middle: [
       {

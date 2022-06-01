@@ -2,6 +2,7 @@
 export interface InformationConfigType {
   name: string
   introcuce: string
+  avatar:string
   socail: SocialType
   about: AboutType
   project: ProjectType[]
