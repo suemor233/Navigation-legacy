@@ -96,7 +96,7 @@ export const informationConfig: InformationConfigType = {
     {
       name: '个人引导页',
       url: 'https://n.suemor.com/',
-      img: 'https://y.suemor.com/imagesNavigation.jpg',
+      img: 'https://y.suemor.com/imagesnav1.jpg',
     }
   ],
   stack: [ // 技术栈，最好别超过16个，否则会出现进度条
