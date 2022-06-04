@@ -5,6 +5,7 @@ export interface InformationConfigType {
   avatar:string
   socail: SocialType
   about: AboutType
+  backgroundImage:string
   project: ProjectType[]
   stack: StackType[]
 
