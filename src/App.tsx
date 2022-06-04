@@ -8,7 +8,8 @@ const App: React.FC = (): JSX.Element => {
   return (
     <>
       <div
-        className="h-screen w-full flex justify-center md:justify-start items-center md:items-start md:p-1 bg absolute overflow-hidden bg-cover bg-no-repeat bg-center"
+        className="h-screen w-full flex justify-center md:justify-start items-center md:items-start md:p-1 
+        bg absolute overflow-hidden md:overflow-auto bg-cover bg-no-repeat bg-center"
         style={{ backgroundImage: `url(${userStore.user.backgroundImage})` }}
       >
         <CardContent>
