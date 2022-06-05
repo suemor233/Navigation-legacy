@@ -3,7 +3,7 @@ import Left from '@/layouts/Left'
 import Right from './layouts/Right'
 import CardContent from './layouts/CardContent'
 import { useStore } from './store'
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from 'react-responsive' 
 const App: React.FC = (): JSX.Element => {
   const {userStore} = useStore()
   const isMobile = useMediaQuery({
@@ -14,7 +14,7 @@ const App: React.FC = (): JSX.Element => {
   return (
     <>
       <div
-        className="h-screen w-full flex justify-center md:justify-start items-center md:items-start md:p-1 
+        className="h-screen w-full flex justify-center md:justify-start items-center md:items-start 
         bg absolute overflow-hidden md:overflow-auto bg-cover bg-no-repeat bg-center"
         style={!isMobile ?{ backgroundImage: `url(${userStore.user.backgroundImage})` } : undefined}
       >

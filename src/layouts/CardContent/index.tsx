@@ -5,7 +5,7 @@ const CardContent: React.FC<React.PropsWithChildren<{}>> = ({ children }: React.
       <div
         className={
           styles['card'] +
-          ' flex md:flex-col flex-row bg-white rounded-2xl transition-all duration-400 transform animate__animated animate__rollIn '
+          ' flex md:flex-col flex-row bg-white rounded-2xl transition-all duration-400 transform animate__animated animate__rollIn'
         }
       >
         {children}
