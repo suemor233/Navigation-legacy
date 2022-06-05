@@ -8,7 +8,7 @@ const Left: React.FC = () => {
 
   return (
     <>
-      <div className="relative h-full flex md:w-full">
+      <div className="relative h-full md:h-auto flex md:w-full">
         <div className={styles['card'] + ' p-14 flex justify-center items-center h-full md:w-full'}>
           <div className="mb-4">
             <Avatar
