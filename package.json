@@ -18,17 +18,21 @@
     "animate.css": "^4.1.1",
     "babel-plugin-macros": "^3.1.0",
     "mobx": "6.1.8",
+    "mobx-react": "^7.5.0",
     "mobx-react-lite": "3.2.0",
+    "qier-progress": "^1.0.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-responsive": "9.0.0-beta.8",
     "react-router-dom": "6",
-    "react-transition-group": "^4.4.2"
+    "react-transition-group": "^4.4.2",
+    "socket.io-client": "^4.5.1",
+    "umi-request": "^1.4.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss7-compat": "^2.2.17",
     "@types/node": "^17.0.36",
-    "@types/react": "^18.0.0",
+    "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.26.0",
     "@typescript-eslint/parser": "^5.26.0",

@@ -5,8 +5,8 @@ import UserStore from '@/store/user';
 const ProjectImageCard: React.FC<{ userStore: UserStore }> = ({ userStore }) => {
  return (
    <>    
-      {userStore.user.project &&
-          userStore.user.project.map(item => {
+      {userStore.user?.project &&
+          userStore.user?.project.map(item => {
             return (
               <div className={styles.wrapper + ' flex flex-col'} key={item.name}>
                 <div className={styles.imgWrapper}>

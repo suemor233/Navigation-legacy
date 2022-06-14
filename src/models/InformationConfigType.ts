@@ -1,39 +1,35 @@
 
 export interface InformationConfigType {
-  name: string
-  introcuce: string
+  static:boolean
+  server:string
+  username: string
+  introduce: string
   avatar:string
-  socail: SocialType
-  about: AboutType
+  socialIds: SocialType
+  about: AboutType[]
   backgroundImage:string
   project: ProjectType[]
   stack: StackType[]
 
 }
 
-interface SocialType {
-  middle: MiddleSocialType[]
-  bottom: Record<'blog' | 'github', string>[]
+export interface SocialType {
+  middle: SocialDetailType[]
+  bottom: SocialDetailType[]
 
 }
 
-interface AboutType {
-  simple: AboutSimpleType[]
-  details: {
-    title: string
-    content: string
-  }[]
-}
-
-export interface AboutSimpleType {
-  Aboutkey: string
-  Aboutvalue: string
+export interface AboutType {
+  key: string
+  value: string
+  detailFlag: boolean
 }
 
 
-interface MiddleSocialType {
-  name: string
-  url: string
+
+export interface SocialDetailType {
+  key: string
+  value: string
   icon: string
 }
 
