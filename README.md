@@ -10,7 +10,7 @@
 ## 方法一
 * 修改`config.ts`即可（此为静态）
 ## 方法二
-* 部署 [后台系统系统]('https://github.com/suemor233/navigation-admin') 和 [服务端]('https://github.com/suemor233/navigation-admin') 
+* 部署 [后台管理系统](https://github.com/suemor233/navigation-admin) 和 [服务端](https://github.com/suemor233/navigation-server)
 # 截图
 
 <p align="middle">
