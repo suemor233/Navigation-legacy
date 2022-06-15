@@ -3,7 +3,7 @@ import styles from './index.module.scss'
 import Icon from '@/components/Icon'
 import { useStore } from '@/store'
 import { observer } from 'mobx-react'
-import { Fragment } from 'react'
+
 const Left: React.FC<{}> = ():JSX.Element => {
   const { userStore } = useStore()
   return (
@@ -14,7 +14,7 @@ const Left: React.FC<{}> = ():JSX.Element => {
             <Avatar src={userStore.user?.avatar} bordered css={{ size: '10em', margin: 'auto' }} />
             <div className="text-center">
               <p className="text-3xl m-0 my-2">{userStore.user?.username}</p>
-              <p className="text-md m-0 mb-5 md:mb-1 w-52">{userStore.user?.introduce}</p>
+              <p className="text-md m-0 mb-5 md:mb-1 w-44">{userStore.user?.introduce}</p>
             </div>
             <div className="flex justify-between">
               {userStore.user?.socialIds.middle.map(item => {

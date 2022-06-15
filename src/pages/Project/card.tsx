@@ -1,12 +1,14 @@
 import styles from './index.module.scss'
 import { Image } from "@nextui-org/react";
 import UserStore from '@/store/user';
+import { ProjectDataType } from '@/models/projectType';
 
-const ProjectImageCard: React.FC<{ userStore: UserStore }> = ({ userStore }) => {
+
+const ProjectImageCard: React.FC<{ project: ProjectDataType[] }> = ({ project }) => {
  return (
    <>    
-      {userStore.user?.project &&
-          userStore.user?.project.map(item => {
+      {
+          project.map(item => {
             return (
               <div className={styles.wrapper + ' flex flex-col'} key={item.name}>
                 <div className={styles.imgWrapper}>
@@ -32,6 +34,7 @@ const ProjectImageCard: React.FC<{ userStore: UserStore }> = ({ userStore }) => 
               </div>
             )
           })}
+
    </> 
  ); 
 }; 
