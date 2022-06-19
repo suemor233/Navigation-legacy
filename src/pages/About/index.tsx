@@ -5,11 +5,12 @@ import { useEffect, useState } from 'react'
 import { informationConfig } from '../../../config'
 import AboutDetail from './detail'
 import AboutSimple from './simple'
-
+import {  toast } from 'react-toast'
 
 
 const About: React.FC = () => {
   const [aboutData, setAboutData] = useState<AboutType[]>()
+  
   const updateData = async () => {
     const _aboutData = await aboutInfo()
     setAboutData(_aboutData.data)
@@ -20,9 +21,6 @@ const About: React.FC = () => {
       setAboutData(informationConfig.about)
     } else {
       updateData()
-      ws.on('user-about', () => {
-        updateData()
-      })
     }
   }, [])
 

@@ -9,10 +9,3 @@ export const socialBottomKeyMap:Record<string,string> = {
   blog: 'fa-brands fa-blogger-b',
   github: 'fa-brands fa-github'
 }
-
-
-// bottom:
-// {
-//   blog: '',
-//   github: ''
-// }

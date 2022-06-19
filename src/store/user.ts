@@ -6,6 +6,7 @@ import { informationConfig } from "../../config";
 import ws from '@/socket';
 import { userInfo } from '@/api/modules/user';
 import { socialBottomKeyMap, socialKeyMap } from '@/common/social';
+import { toast } from 'react-toast';
 
 export interface UserStoreType extends Pick<InformationConfigType, 'username' | 'introduce' | 'avatar' | 'socialIds'| 'backgroundImage'> {
 
@@ -56,6 +57,7 @@ export default class UserStore {
 
   connectUserSocket() {
     ws.on('user-update', (res) => {
+      toast.success('基本信息已更新')
       this.initUser()
     })
   }
