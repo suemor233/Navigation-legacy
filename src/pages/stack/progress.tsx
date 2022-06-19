@@ -19,10 +19,10 @@ const StackProgress: React.FC<{ stack: StackType[] }> = ({ stack }) => {
         _arr[_arr.length - 1].push(item)
       }
     })
-    console.log(_arr);
-
     return _arr
   }
+
+  
   return (
     <>
       <div>

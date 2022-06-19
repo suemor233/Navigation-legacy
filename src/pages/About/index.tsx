@@ -1,37 +1,21 @@
-import { aboutInfo } from '@/api/modules/about'
-import { AboutType } from '@/models/InformationConfigType'
-import ws from '@/socket'
-import { useEffect, useState } from 'react'
-import { informationConfig } from '../../../config'
+
+import { useStore } from '@/store'
+import { observer } from 'mobx-react'
 import AboutDetail from './detail'
 import AboutSimple from './simple'
-import {  toast } from 'react-toast'
 
 
 const About: React.FC = () => {
-  const [aboutData, setAboutData] = useState<AboutType[]>()
-  
-  const updateData = async () => {
-    const _aboutData = await aboutInfo()
-    setAboutData(_aboutData.data)
-  }
-
-  useEffect(() => {
-    if (__STATIC__) {
-      setAboutData(informationConfig.about)
-    } else {
-      updateData()
-    }
-  }, [])
+  const {aboutStore} = useStore()
 
   return (
     <>
       <div className="px-10 pt-10 overflow-y-auto animate__animated animate__fadeIn h-full">
-        {aboutData && <AboutSimple aboutData={aboutData} />}
-        {aboutData && <AboutDetail aboutData={aboutData} />}
+        {aboutStore.about&& <AboutSimple aboutData={aboutStore.about} />}
+        {aboutStore.about && <AboutDetail aboutData={aboutStore.about} />}
       </div>
     </>
   )
 }
 
-export default About
+export default observer(About)

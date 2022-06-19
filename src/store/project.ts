@@ -36,7 +36,5 @@ export default class ProjectStore {
     })
   }
 
-
-
 }
 
