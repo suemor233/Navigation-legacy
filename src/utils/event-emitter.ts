@@ -33,8 +33,6 @@ export class EventEmitter {
     }
   }
 
-  off(event: CustomEventTypes, handler?: (...rest: any) => void)
-  off(event: EventTypes, handler?: (...rest: any) => void)
   off(event: string, handler?: (...rest: any) => void) {
     const queue = this.observers[event]
     if (!queue) {

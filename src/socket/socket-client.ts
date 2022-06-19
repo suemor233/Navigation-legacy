@@ -28,7 +28,6 @@ export class SocketClient {
   }
   handleEvent(type: EventTypes, data: any) {
     eventBus.emit(type, data)
-    // eventHandler(type, data)
   }
   emit(event: EventTypes, payload: any) {
     return new Promise((resolve) => {
