@@ -5,7 +5,7 @@ import CardContent from './layouts/CardContent'
 import { useStore } from './store'
 import { useMediaQuery } from 'react-responsive' 
 import { observer } from 'mobx-react'
-import { ToastContainer } from 'react-toast'
+import { ToastContainer } from 'react-toastify'
 const App: React.FC = (): JSX.Element => {
   const {userStore} = useStore()
   const isMobile = useMediaQuery({
@@ -23,8 +23,8 @@ const App: React.FC = (): JSX.Element => {
           <Left />
           <Right />
         </CardContent>
-        <ToastContainer delay={3000} position={'top-center'}/>
       </div>
+      <ToastContainer />
     </>
   )
 }

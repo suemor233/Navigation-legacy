@@ -1,11 +1,5 @@
-import { stackInfo } from '@/api/modules/stack'
-import { StackType } from '@/models/StackType'
-import ws from '@/socket'
 import { useStore } from '@/store'
 import { observer } from 'mobx-react'
-import { useEffect, useState } from 'react'
-import { toast } from 'react-toast'
-import { informationConfig } from '../../../config'
 import StackProgress from './progress'
 
 const Stack: React.FC = () => {

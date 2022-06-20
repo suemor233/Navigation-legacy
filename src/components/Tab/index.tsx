@@ -23,7 +23,7 @@ const Tab: React.FC = () => {
         return [item[0], item[1], false]
       })
     )
-  }, [])
+  }, [location])
   const navigate = useNavigate()
   const handleSelecated = (e: React.MouseEvent, tab: [string, string, boolean]) => {
     if (location.pathname !== tab[1]) {

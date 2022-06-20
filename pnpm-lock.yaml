@@ -30,7 +30,7 @@ specifiers:
   react-dom: ^18.0.0
   react-responsive: 9.0.0-beta.8
   react-router-dom: '6'
-  react-toast: ^1.0.3
+  react-toastify: ^9.0.5
   react-transition-group: ^4.4.2
   sass: ^1.52.1
   socket.io-client: ^4.5.1
@@ -56,7 +56,7 @@ dependencies:
   react-dom: 18.1.0_react@18.1.0
   react-responsive: 9.0.0-beta.8_react@18.1.0
   react-router-dom: 6.3.0_ef5jwxihqo6n7gxfmzogljlgcm
-  react-toast: 1.0.3_react@18.1.0
+  react-toastify: 9.0.5_ef5jwxihqo6n7gxfmzogljlgcm
   react-transition-group: 4.4.2_ef5jwxihqo6n7gxfmzogljlgcm
   socket.io-client: 4.5.1
   umi-request: 1.4.0
@@ -3007,12 +3007,15 @@ packages:
       react: 18.1.0
     dev: false
 
-  /react-toast/1.0.3_react@18.1.0:
-    resolution: {integrity: sha512-gL3+O5hlLaoBmd36oXWKrjFeUyLCMQ04AIh48LrnUvdeg2vhJQ0E803TgVemgJvYUXKlutMVn9+/QS2DDnk26Q==}
+  /react-toastify/9.0.5_ef5jwxihqo6n7gxfmzogljlgcm:
+    resolution: {integrity: sha512-dszPCeQINY+Nm6HmsiAXT/7wsazPqv0S/RuhIYLAW+fTKcd3T1iRjZG0XqrN9nvAzqaE5J6uxMaiBrOevxjY8g==}
     peerDependencies:
       react: '>=16'
+      react-dom: '>=16'
     dependencies:
+      clsx: 1.1.1
       react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
     dev: false
 
   /react-transition-group/4.4.2_ef5jwxihqo6n7gxfmzogljlgcm:

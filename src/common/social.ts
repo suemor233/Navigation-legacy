@@ -6,6 +6,6 @@ export const socialKeyMap:Record<string,string> = {
 }
 
 export const socialBottomKeyMap:Record<string,string> = {
-  blog: 'fa-brands fa-blogger-b',
-  github: 'fa-brands fa-github'
+  Blog: 'fa-brands fa-blogger-b',
+  Github: 'fa-brands fa-github'
 }

@@ -1,20 +1,17 @@
-import { extend } from 'umi-request';
-import { useEffect } from 'react';
 import { InformationConfigType, SocialDetailType, SocialType, StackType } from '@/models/InformationConfigType';
 import { makeAutoObservable, runInAction } from 'mobx';
 import { informationConfig } from "../../config";
 import ws from '@/socket';
 import { userInfo } from '@/api/modules/user';
 import { socialBottomKeyMap, socialKeyMap } from '@/common/social';
-import { toast } from 'react-toast';
-
-export interface UserStoreType extends Pick<InformationConfigType, 'username' | 'introduce' | 'avatar' | 'socialIds'| 'backgroundImage'> {
+import { notice } from '@/utils/notice';
+export interface UserStoreType extends Pick<InformationConfigType, 'username' | 'introduce' | 'avatar' | 'socialIds' | 'backgroundImage'> {
 
 }
-
 export interface UserResType extends Pick<InformationConfigType, 'username' | 'introduce' | 'avatar' | 'backgroundImage'> {
   socialIds: SocialDetailType[]
 }
+
 export default class UserStore {
   constructor() {
     makeAutoObservable(this)
@@ -28,7 +25,7 @@ export default class UserStore {
 
   user: UserStoreType | null = null
 
-  async initUser(data?:UserResType ) {
+  async initUser(data?: UserResType) {
     const res = data || await userInfo()
     const _user: UserResType = res
     if (res) {
@@ -42,6 +39,7 @@ export default class UserStore {
             item.icon = socialKeyMap[item.key]
             socialIds.middle.push(item)
           } else {
+            item.key = item.key.replace(/^\S/, s => s.toUpperCase())
             item.icon = socialBottomKeyMap[item.key]
             socialIds.bottom.push(item)
           }
@@ -53,19 +51,14 @@ export default class UserStore {
     }
   }
 
-  async updateUser() {
-    
-  }
+
 
 
   connectUserSocket() {
     ws.on('user-update', (res) => {
-      toast.success('基本信息已更新')
+      notice.toast('基本信息已更新')
       this.initUser(res)
     })
   }
-
-
-
 }
 
