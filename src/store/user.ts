@@ -28,8 +28,8 @@ export default class UserStore {
 
   user: UserStoreType | null = null
 
-  async initUser() {
-    const res = await userInfo()
+  async initUser(data?:UserResType ) {
+    const res = data || await userInfo()
     const _user: UserResType = res
     if (res) {
       runInAction(() => {
@@ -51,14 +51,17 @@ export default class UserStore {
         this.user = _user as any
       })
     }
+  }
 
+  async updateUser() {
+    
   }
 
 
   connectUserSocket() {
     ws.on('user-update', (res) => {
       toast.success('基本信息已更新')
-      this.initUser()
+      this.initUser(res)
     })
   }
 
