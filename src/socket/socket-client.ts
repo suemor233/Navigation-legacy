@@ -7,13 +7,15 @@ export class SocketClient {
   public socket!: Socket
 
   constructor() {
-    this.socket = io(`http://127.0.0.1:2347`, {
-      timeout: 10000,
-      reconnectionDelay: 3000,
-      autoConnect: false,
-      reconnectionAttempts: 3,
-      transports: ['websocket'],
-    })
+    if (!__STATIC__) {
+      this.socket = io(`http://127.0.0.1:2347`, {
+        timeout: 10000,
+        reconnectionDelay: 3000,
+        autoConnect: false,
+        reconnectionAttempts: 3,
+        transports: ['websocket'],
+      })
+    }
   }
   initIO() {
     if (!this.socket) {

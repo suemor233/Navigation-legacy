@@ -1,6 +1,6 @@
 import { InformationConfigType } from './src/models/InformationConfigType'
 export const informationConfig: InformationConfigType = {
-  static: false, //如果为 true 就为纯静态页面，不会调用服务器端的数据，只需要配置在此配置即可。反之调用服务器端的数据, 必须填写服务器地址，其余配置项无需填写， 默认为 false
+  static: true, //如果为 true 就为纯静态页面，不会调用服务器端的数据，只需要配置在此配置即可。反之调用服务器端的数据, 必须填写服务器地址，其余配置项无需填写， 默认为 false
   server: 'http://localhost:2347',
   username: 'suemor',
   introduce: '前端萌新',
