@@ -31,13 +31,10 @@ export default class StackStore {
 
 
   connectStackSocket() {
-    ws.on('user-stack', () => {
+    ws.on('user-stack', (res) => {
       toast.success('技术栈已更新')
-      this.updateStack()
+      this.stack = res
     })
   }
-
-
-
 }
 
