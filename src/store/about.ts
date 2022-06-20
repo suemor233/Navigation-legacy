@@ -29,9 +29,9 @@ export default class AboutStore {
 
 
   connectaboutSocket() {
-    ws.on('user-about', () => {
+    ws.on('user-about', (res) => {
       toast.success('关于已更新')
-      this.updateabout()
+      this.about = res
     })
   }
 
