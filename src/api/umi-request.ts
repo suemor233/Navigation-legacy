@@ -6,7 +6,7 @@ const qprogress = new QProgress()
  * 配置request请求时的默认参数
  */
 const client = extend({
-    prefix: import.meta.env.VITE_API_BASE_URL as string,
+    prefix: import.meta.env.VITE_API_API_URL as string,
     timeout: 5000,
     headers: {
         'Content-Type': 'multipart/form-data',

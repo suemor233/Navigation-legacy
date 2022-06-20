@@ -8,7 +8,7 @@ export class SocketClient {
 
   constructor() {
     if (!__STATIC__) {
-      this.socket = io(`http://127.0.0.1:2348`, {
+      this.socket = io(import.meta.env.VITE_API_GATEWAY_URL, {
         timeout: 10000,
         reconnectionDelay: 3000,
         autoConnect: false,
