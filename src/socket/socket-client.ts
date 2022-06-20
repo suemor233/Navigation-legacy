@@ -8,7 +8,7 @@ export class SocketClient {
 
   constructor() {
     if (!__STATIC__) {
-      this.socket = io(`http://127.0.0.1:2347`, {
+      this.socket = io(`http://127.0.0.1:2348`, {
         timeout: 10000,
         reconnectionDelay: 3000,
         autoConnect: false,
@@ -18,7 +18,7 @@ export class SocketClient {
     }
   }
   initIO() {
-    if (!this.socket) {
+    if (!this.socket || __STATIC__) {
       return
     }
     this.socket.close()
