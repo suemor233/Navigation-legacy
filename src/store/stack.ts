@@ -2,11 +2,11 @@ import { makeAutoObservable, runInAction } from 'mobx';
 import { informationConfig } from "../../config";
 import ws from '@/socket';
 
-import { toast } from 'react-toast';
 import { projectInfo } from '@/api/modules/project';
 import { ProjectDataType } from '@/models/projectType';
 import { StackType } from '@/models/StackType';
 import { stackInfo } from '@/api/modules/stack';
+import { notice } from '@/utils/notice';
 
 
 export default class StackStore {
@@ -32,7 +32,7 @@ export default class StackStore {
 
   connectStackSocket() {
     ws.on('user-stack', (res) => {
-      toast.success('技术栈已更新')
+      notice.toast('技术栈已更新')
       this.stack = res
     })
   }

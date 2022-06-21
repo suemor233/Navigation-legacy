@@ -1,8 +1,8 @@
+import { notice } from './../utils/notice';
 import { makeAutoObservable, runInAction } from 'mobx';
 import { informationConfig } from "../../config";
 import ws from '@/socket';
 
-import { toast } from 'react-toast';
 import { aboutInfo } from '@/api/modules/about';
 import { AboutType } from '@/models/InformationConfigType';
 
@@ -30,7 +30,7 @@ export default class AboutStore {
 
   connectaboutSocket() {
     ws.on('user-about', (res) => {
-      toast.success('关于已更新')
+      notice.toast('关于已更新')
       this.about = res
     })
   }

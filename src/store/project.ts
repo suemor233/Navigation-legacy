@@ -1,9 +1,9 @@
 import { makeAutoObservable } from 'mobx';
 import { informationConfig } from "../../config";
 import ws from '@/socket';
-import { toast } from 'react-toast';
 import { projectInfo } from '@/api/modules/project';
 import { ProjectDataType } from '@/models/projectType';
+import { notice } from '@/utils/notice';
 
 
 export default class ProjectStore {
@@ -31,7 +31,7 @@ export default class ProjectStore {
 
   connectProjectSocket() {
     ws.on('user-project', () => {
-      toast.success('项目已更新')
+      notice.toast('项目已更新')
       this.updateProject()
     })
   }
