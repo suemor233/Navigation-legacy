@@ -12,11 +12,12 @@ const App: React.FC = (): JSX.Element => {
     query: '(max-width: 768px)'
   })
 
+
   return (
     <>
       <div
         className="h-screen w-full flex justify-center md:justify-start items-center md:items-start 
-        bg absolute overflow-hidden bg-cover bg-no-repeat bg-center"
+        bg absolute overflow-hidden md:overflow-visible bg-cover bg-no-repeat bg-center"
         style={!isMobile ?{ backgroundImage: `url(${userStore.user?.backgroundImage})` } : undefined}
       >
         <CardContent>
