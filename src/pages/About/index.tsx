@@ -10,7 +10,7 @@ const About: React.FC = () => {
   })
   return (
     <>
-      <div className="px-10 pt-10 animate__animated animate__fadeIn h-full" style={!isMobile ? {'overflow':'overlay'} : undefined}>
+      <div className="pt-5 px-10 md:px-1 animate__animated animate__fadeIn h-full" style={!isMobile ? {'overflow':'overlay'} : undefined}>
         {aboutStore.about && <AboutSimple aboutData={aboutStore.about} />}
         {aboutStore.about && <AboutDetail aboutData={aboutStore.about} />}
       </div>
