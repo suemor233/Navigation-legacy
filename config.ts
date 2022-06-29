@@ -92,19 +92,19 @@ export const informationConfig: InformationConfigType = {
       img: 'https://y.suemor.com/imagessearchPage.jpg'
     },
     {
-      name: '博客后台',
-      url: 'https://github.com/suemor233/MyBlog-Admin',
-      img: 'https://y.suemor.com/imagesMyBlog-Admin.jpeg'
-    },
-    {
-      name: '博客后端',
-      url: 'https://github.com/suemor233/MyBlog-server',
-      img: 'https://y.suemor.com/imagesMyblog-Server.jpg'
-    },
-    {
       name: '个人引导页',
       url: 'https://n.suemor.com/',
-      img: 'https://y.suemor.com/imagesnav1.jpg'
+      img: 'https://y.suemor.com/imagesna4.jpg'
+    },
+    {
+      name: '引导页管理系统',
+      url: 'https://admin.suemor.com/#/login',
+      img: 'https://y.suemor.com/imagesna5.jpg'
+    },
+    {
+      name: '引导页后端',
+      url: 'https://github.com/suemor233/navigation-server',
+      img: 'https://y.suemor.com/imagesnavigation-server.jpg'
     }
   ],
   stack: [

@@ -1,4 +1,3 @@
-import { notice } from '../../utils/notice'
 import { makeAutoObservable, runInAction } from 'mobx'
 import { informationConfig } from '../../../config'
 import ws from '@/socket'
