@@ -42,53 +42,48 @@ export const informationConfig: InformationConfigType = {
       }
     ]
   },
-  about: [
-    {
-      key: '名称',
-      value: 'suemor',
-      detailFlag: false
-    },
-    {
-      key: '性格',
-      value: '内向',
-      detailFlag: false
-    },
-    {
-      key: '出生日期',
-      value: '2003年11月6日',
-      detailFlag: false
-    },
-    {
-      key: '体重',
-      value: '160斤',
-      detailFlag: false
-    },
-    {
-      key: '坐标',
-      value: '江苏常州',
-      detailFlag: false
-    },
-    {
-      key: '学历',
-      value: '中专',
-      detailFlag: false
-    },
-    {
-      key: '我是谁?',
-      value: `我叫 suemor，是一个有严重社恐的人，目前正在初学前端，详细介绍可以 <a href="https://www.suemor.com/about" target={'_blank'}>点击这里</a> 里`,
-      detailFlag: true
-    },
-    {
-      key: '这个网页是干什么?',
-      value: `这是一个简单的引导页，属于作者刚接触 React 写的一个练手级小项目，用来展示我的个人信息`,
-      detailFlag: true
-    },
-    {
-      key: '如何获取这个引导页?',
-      value: ` 代码开源在 <a target={'_blank'} href="https://github.com/suemor233/Navigation2">Github </a> ，现在已经拥有静态和后端两个方案，只需要修改 config.ts 就可以配置这个引导页`,
-      detailFlag: true
-    }
-  ],
+  about: {
+    basic: [
+      {
+        key: '名称',
+        value: 'suemor'
+      },
+      {
+        key: '性格',
+        value: '内向'
+      },
+      {
+        key: '出生日期',
+        value: '2003年11月6日'
+      },
+      {
+        key: '体重',
+        value: '160斤'
+      },
+      {
+        key: '坐标',
+        value: '江苏常州'
+      },
+      {
+        key: '学历',
+        value: '中专'
+      }
+    ],
+    detail: [
+      {
+        title: '我是谁?',
+        content: `我叫 suemor，是一个有严重社恐的人，目前正在初学前端，详细介绍可以 <a href="https://www.suemor.com/about" target={'_blank'}>点击这里</a>`
+      },
+      {
+        title: '这个网页是干什么?',
+        content: `这是一个简单的引导页，属于作者刚接触 React 写的一个练手级小项目，用来展示我的个人信息`
+      },
+      {
+        title: '如何获取这个引导页?',
+        content: ` 代码开源在 <a target={'_blank'} href="https://github.com/suemor233/Navigation2">Github </a> ，现在已经拥有静态和后端两个方案，只需要修改 config.ts 就可以配置这个引导页`
+      }
+    ]
+  },
   project: [
     // url 可选
     {

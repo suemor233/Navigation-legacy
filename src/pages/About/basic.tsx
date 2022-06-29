@@ -1,11 +1,10 @@
-
+import { BasicDataType } from '@/models/About'
 import { AboutType } from '@/models/InformationConfigType'
 import { useMemo } from 'react'
 
-const AboutSimple: React.FC<{ aboutData: AboutType[] }> = ({ aboutData }) => {
+const AboutBasic: React.FC<{ aboutData: BasicDataType[] }> = ({ aboutData }) => {
   const ArrProgress = useMemo(() => {
-    aboutData = aboutData.filter(item => item.detailFlag === false)
-    const _arr: Array<AboutType[]> = []
+    const _arr: Array<BasicDataType[]> = []
     aboutData.forEach((item, index) => {
       if (index % 2 === 0) {
         _arr.push([item])
@@ -41,4 +40,4 @@ const AboutSimple: React.FC<{ aboutData: AboutType[] }> = ({ aboutData }) => {
   )
 }
 
-export default AboutSimple
+export default AboutBasic

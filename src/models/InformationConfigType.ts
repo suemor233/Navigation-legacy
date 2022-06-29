@@ -1,3 +1,4 @@
+import { BasicDataType, DetailDataType } from "./About"
 
 export interface InformationConfigType {
   static:boolean
@@ -6,7 +7,7 @@ export interface InformationConfigType {
   introduce: string
   avatar:string
   socialIds: SocialType
-  about: AboutType[]
+  about: AboutType
   backgroundImage:string
   project: ProjectType[]
   stack: StackType[]
@@ -20,9 +21,8 @@ export interface SocialType {
 }
 
 export interface AboutType {
-  key: string
-  value: string
-  detailFlag: boolean
+  basic: BasicDataType[]
+  detail: DetailDataType[]
 }
 
 
