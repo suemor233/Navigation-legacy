@@ -1,12 +1,11 @@
 import styles from './index.module.scss'
 import { Image } from "@nextui-org/react";
-import UserStore from '@/store/user';
 import { ProjectDataType } from '@/models/projectType';
 
 
 const ProjectImageCard: React.FC<{ project: ProjectDataType[] }> = ({ project }) => {
  return (
-   <>    
+   <>
       {
           project.map(item => {
             return (
@@ -18,7 +17,7 @@ const ProjectImageCard: React.FC<{ project: ProjectDataType[] }> = ({ project })
                     alt={item.name}
                     width={'100%'}
                     height={'100%'}
-                    objectFit={'cover'}
+                    objectFit={'fill'}
                   />
                   {
                     item.url && <div className={styles.link}>
@@ -26,7 +25,7 @@ const ProjectImageCard: React.FC<{ project: ProjectDataType[] }> = ({ project })
                       详情
                     </a>
                   </div>
-                  } 
+                  }
                 </div>
                 <div className='mt-2'>
                   <p className="text-center mt-1 lg:mt-0.5 text-xl font-sans">{item.name}</p>
@@ -35,8 +34,8 @@ const ProjectImageCard: React.FC<{ project: ProjectDataType[] }> = ({ project })
             )
           })}
 
-   </> 
- ); 
-}; 
+   </>
+ );
+};
 
 export default ProjectImageCard;
