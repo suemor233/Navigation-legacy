@@ -7,6 +7,9 @@ import { RootStoreProvider } from './context/root-store'
 import './styles/index.css'
 import 'animate.css';
 import 'react-toastify/dist/ReactToastify.css';
+import { printToConsole } from './utils/console'
+
+printToConsole()
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <HashRouter>

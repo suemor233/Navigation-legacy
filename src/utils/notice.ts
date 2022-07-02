@@ -7,7 +7,6 @@ import { toast } from "react-toastify";
       hideProgressBar: true,
       closeOnClick:true,
       pauseOnHover:false,
-
     });
   }
 

@@ -5,6 +5,7 @@ import ws from '@/socket';
 import { userInfo } from '@/api/modules/user';
 import { socialBottomKeyMap, socialKeyMap } from '@/common/social';
 import { notice } from '@/utils/notice';
+import { SocketKey } from '@/common/socketKey';
 export interface UserStoreType extends Pick<InformationConfigType, 'username' | 'introduce' | 'avatar' | 'socialIds' | 'backgroundImage'> {
 
 }
@@ -55,7 +56,7 @@ export default class UserStore {
 
 
   connectUserSocket() {
-    ws.on('user-update', (res) => {
+    ws.on(SocketKey.USER_UPDATE, (res) => {
       notice.toast('基本信息已更新')
       this.initUser(res)
     })

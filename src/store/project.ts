@@ -4,7 +4,7 @@ import ws from '@/socket';
 import { projectInfo } from '@/api/modules/project';
 import { ProjectDataType } from '@/models/projectType';
 import { notice } from '@/utils/notice';
-
+import { SocketKey } from '@/common/socketKey';
 
 export default class ProjectStore {
 
@@ -30,7 +30,7 @@ export default class ProjectStore {
 
 
   connectProjectSocket() {
-    ws.on('user-project', () => {
+    ws.on(SocketKey.USER_PROJECT, () => {
       notice.toast('项目已更新')
       this.updateProject()
     })

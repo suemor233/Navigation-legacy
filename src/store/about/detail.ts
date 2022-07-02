@@ -4,6 +4,7 @@ import { DetailDataType } from '@/models/About';
 import { informationConfig } from '../../../config';
 import { detailInfo } from '@/api/modules/about';
 import { notice } from '@/utils/notice';
+import { SocketKey } from '@/common/socketKey';
 
 
 export default class DetailStore {
@@ -30,7 +31,7 @@ export default class DetailStore {
 
 
   connectaboutSocket() {
-    ws.on('about-detail', (res) => {
+    ws.on(SocketKey.ABOUT_DETAIL, (res) => {
       notice.toast('关于已更新')
       this.detail = res
     })

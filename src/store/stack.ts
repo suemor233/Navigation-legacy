@@ -1,16 +1,13 @@
 import { makeAutoObservable, runInAction } from 'mobx';
 import { informationConfig } from "../../config";
 import ws from '@/socket';
-
-import { projectInfo } from '@/api/modules/project';
-import { ProjectDataType } from '@/models/projectType';
 import { StackType } from '@/models/StackType';
 import { stackInfo } from '@/api/modules/stack';
 import { notice } from '@/utils/notice';
-
+import { SocketKey } from '@/common/socketKey';
 
 export default class StackStore {
-  
+
   stack: StackType[]  | null = null
 
   constructor() {
@@ -31,7 +28,7 @@ export default class StackStore {
 
 
   connectStackSocket() {
-    ws.on('user-stack', (res) => {
+    ws.on(SocketKey.USER_STACK, (res) => {
       notice.toast('技术栈已更新')
       this.stack = res
     })
