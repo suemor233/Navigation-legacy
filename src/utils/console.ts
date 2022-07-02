@@ -1,5 +1,3 @@
-
-
 export function printToConsole() {
   try {
     console.log(
