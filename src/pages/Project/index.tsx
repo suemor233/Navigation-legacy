@@ -1,10 +1,5 @@
-import { projectInfo } from '@/api/modules/project'
-import { ProjectDataType } from '@/models/projectType'
-import ws from '@/socket'
 import { useStore } from '@/store'
 import { observer } from 'mobx-react'
-import { useEffect, useState } from 'react'
-import { informationConfig } from '../../../config'
 import ProjectImageCard from './card'
 
 import styles from './index.module.scss'

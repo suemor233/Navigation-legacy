@@ -1,5 +1,4 @@
 import { StackType } from '@/models/StackType'
-import UserStore from '@/store/user'
 import { Progress } from '@nextui-org/react'
 
 type NormalColors = 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'gradient'
@@ -22,7 +21,7 @@ const StackProgress: React.FC<{ stack: StackType[] }> = ({ stack }) => {
     return _arr
   }
 
-  
+
   return (
     <>
       <div>

@@ -17,7 +17,6 @@ export interface InformationConfigType {
 export interface SocialType {
   middle: SocialDetailType[]
   bottom: SocialDetailType[]
-
 }
 
 export interface AboutType {
